@@ -66,9 +66,11 @@ td { vertical-align: top; }
     Initializr styles
     http://verekia.com/initializr/responsive-template
     Author: Jonathan Verrecchia
+    Modified Chris Stein - changed px fontsize and line-height to be more flexible
+    also changed font to sans-serif only so it will be served as Helvetica on Mac and Arial on Windows
    =================================================== */
 
-body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
+body{ font:100%/1.5 sans-serif; }
 
 .wrapper{
 	width:90%;
@@ -161,8 +163,8 @@ nav a:hover{
 
 
 /* ==|== media queries ====================================================== */
-
-@media only screen and (min-width: 480px) {
+/* Changed width to ems 480/16 = 30 */
+@media only screen and (min-width: 30em) {
 
 /* ====================
     INTERMEDIATE: Menu
@@ -190,8 +192,8 @@ nav a:hover{
 		margin:0 0.7%;		
 	}
 }
-
-@media only screen and (min-width: 768px) {
+/* Changed width to ems 76816 = 481 */
+@media only screen and (min-width: 48em) {
 
 /* ====================
     WIDE: CSS3 Effects
@@ -231,15 +233,15 @@ nav a:hover{
 		width:28%;
 	}
 }
-
-@media only screen and (min-width: 1140px) {
+/* Changed width to ems 1140/16 = 71.25 */
+@media only screen and (min-width: 71.25em) {
 
 /* ===============
     Maximal Width
    =============== */
 
 	.wrapper{
-		width:1026px; /* 1140px - 10% for margins */
+		width:64.125em; /*1026px in em*/ /* 1140px - 10% for margins */
 		margin:0 auto;
 	}
 }
